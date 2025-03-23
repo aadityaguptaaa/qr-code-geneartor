@@ -38,3 +38,10 @@ A simple and efficient QR code generator built using HTML, CSS, and JavaScript. 
 ## License
 This project is licensed under the MIT License.
 
+
+
+
+
+
+
+
