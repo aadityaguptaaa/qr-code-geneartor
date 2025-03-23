@@ -22,7 +22,7 @@ A simple and efficient QR code generator built using HTML, CSS, and JavaScript. 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/qr-code-generator.git
+   git clone https://github.com/aadityaguptaaa/qr-code-generator.git
    ```
 2. Navigate to the project directory:
    ```sh
