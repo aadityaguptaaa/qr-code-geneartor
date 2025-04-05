@@ -65,19 +65,21 @@ Follow these steps to run the project locally:
 - [qrcode.js](https://davidshimjs.github.io/qrcodejs/) (or your used QR code library)
 
 
+<br>
+
 ## 🌐 Check Out Live
 
 🔗 **Live Website**: [https://aadityaguptaaa.github.io/qr-code-generator/](https://aadityaguptaaa.github.io/qr-code-generator/)
 
 
 <br>
-<br>
-
 
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
 Feel free to use, modify, and distribute it as per the license terms.
+
+
 
 
 > Made with 💻 by [aadityaguptaaa](https://github.com/aadityaguptaaa)
