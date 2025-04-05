@@ -1,68 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator - The Code School</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator - The Code School</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    #qrContainer {
+      display: none; /* hide initially */
+    }
+
+    #qrContainer img {
+      width: 200px;
+      height: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      margin: 20px auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <label for="qrText">Enter your Text or URL</label>
-        <input type="text" id="qrText" placeholder="Text or URL" required>
+  <div class="container">
+    <label for="qrText">Enter your Text or URL</label>
+    <input type="text" id="qrText" placeholder="Text or URL" required />
 
-        <div id="qrContainer">
+    <div id="qrContainer"></div>
 
-
-        </div>
-
-
-        <button type="button" class="btn" id="genBtn">Generate QR Code</button>
-        <a href="" class="btn" id="downloadBtn" download="QRcode.jpg">Download</a>
+    <div class="button-group">
+      <button type="button" class="btn" id="genBtn">Generate QR Code</button>
+      <a href="#" class="btn download-btn" id="downloadBtn" download="QRCode.png">Download</a>
     </div>
-</body>
+  </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    const qrContainer = document.getElementById('qrContainer');
+    const qrText = document.getElementById('qrText');
+    const genBtn = document.getElementById('genBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
 
-<script>
-    let qrContainer = document.getElementById('qrContainer')
-    let qrText = document.getElementById('qrText')
-    let genBtn = document.getElementById('genBtn')
-    let downloadBtn = document.getElementById('downloadBtn')
-    let qrImage
+    function generateQR(text) {
+      qrContainer.innerHTML = ""; // Clear previous QR
+      qrContainer.style.display = "block"; // Show only when generating
 
-    generateQR = (qrtext)=>{
-        qrContainer.innerHTML = ""
-        return new QRCode(qrContainer, {
-            text: qrtext,
-            width: 200,
-            height: 200,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    }
+      const qrCode = new QRCode(qrContainer, {
+        text: text,
+        width: 200,
+        height: 200,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
 
-    downloadQR = ()=>{
-        qrImage = document.querySelector('#qrContainer img')
-
-        let imgSrc = qrImage.getAttribute('src')
-        console.log(imgSrc)
-        downloadBtn.setAttribute("href", imgSrc)
-    }
-
-    genBtn.addEventListener("click", (e)=>{
-        let text = qrText.value
-        if(text.length>0){
-
-            qrcode = generateQR(text)
-            qrContainer.classList.add('img-show')
-            downloadBtn.classList.add('download-active')
-
+      // Wait for QR to render then get image
+      setTimeout(() => {
+        const qrImage = qrContainer.querySelector('img');
+        if (qrImage) {
+          const imgSrc = qrImage.getAttribute('src');
+          downloadBtn.setAttribute("href", imgSrc);
+          downloadBtn.classList.add("download-active");
         }
-    })
+      }, 300);
+    }
 
-    downloadBtn.addEventListener("click", downloadQR)
-</script>
+    genBtn.addEventListener("click", () => {
+      const text = qrText.value.trim();
+      if (text.length > 0) {
+        generateQR(text);
+      } else {
+        alert("Please enter a valid text or URL.");
+        qrContainer.style.display = "none"; // hide QR container
+        downloadBtn.classList.remove("download-active");
+      }
+    });
 
+    downloadBtn.addEventListener("click", (e) => {
+      if (!downloadBtn.getAttribute('href')) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
 </html>
