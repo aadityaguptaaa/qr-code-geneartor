@@ -10,7 +10,7 @@ A simple and efficient **QR Code Generator** built with HTML, CSS, and JavaScrip
 ## 📚 Table of Contents
 
 - [Features](#-features)
-- [Screenshots](#-screenshots)
+- [Screenshots](#-Screenshots)
 - [Installation](#-installation)
 - [Usage](#-usage)
 - [Technologies Used](#-technologies-used)
