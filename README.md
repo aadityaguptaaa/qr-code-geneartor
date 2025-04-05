@@ -16,7 +16,7 @@ A simple and efficient **QR Code Generator** built with HTML, CSS, and JavaScrip
 - [Technologies Used](#-technologies-used)
 - [Check Out Live](#-Check-Out-Live)
 - [License](#-license)
-- [Author](#-author)
+  
 
 <br>
 
