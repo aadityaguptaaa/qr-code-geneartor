@@ -32,7 +32,7 @@ A simple and efficient **QR Code Generator** built with HTML, CSS, and JavaScrip
 
 ## 🖼️ Screenshots
 
-![QR Code Generator Screenshot](https://github.com/user-attachments/assets/6ff4db00-ba08-4d64-9d71-39517252d742)
+(https://github.com/user-attachments/assets/6ff4db00-ba08-4d64-9d71-39517252d742)
 
 
 
