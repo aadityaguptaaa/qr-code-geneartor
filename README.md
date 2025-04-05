@@ -3,13 +3,6 @@
 
 A simple and efficient **QR Code Generator** built with HTML, CSS, and JavaScript. Instantly generate QR codes for any text or URL with a clean interface and the ability to download your code in one click.
 
----
-
-## 🌐 Check Out Live
-
-🔗 **Live Website**: [https://aadityaguptaaa.github.io/qr-code-generator/](https://aadityaguptaaa.github.io/qr-code-generator/)
-
----
 
 
 ## 📚 Table of Contents
@@ -22,8 +15,6 @@ A simple and efficient **QR Code Generator** built with HTML, CSS, and JavaScrip
 - [License](#-license)
 - [Author](#-author)
 
----
-
 
 ## 📌 Features
 
@@ -32,13 +23,12 @@ A simple and efficient **QR Code Generator** built with HTML, CSS, and JavaScrip
 - 🎨 Responsive, minimal, and clean UI
 - ⚡ No backend required – fully client-side
 
----
 
 ## 🖼️ Screenshots
 
 ![QR Code Generator Screenshot](https://github.com/user-attachments/assets/dd24cb6a-7dcf-4407-b217-5a8a3448a5cc)
 
----
+
 
 ## 📥 Installation
 
@@ -57,7 +47,7 @@ Follow these steps to run the project locally:
 3. **Open the project in your browser**
    Just open `index.html` using any web browser. No build steps or server setup needed.
 
----
+
 
 ## 🚀 Usage
 
@@ -65,7 +55,7 @@ Follow these steps to run the project locally:
 2. Click on the **"Generate QR Code"** button.
 3. Use the **"Download"** button to save the QR code as a PNG image.
 
----
+
 
 ## 🧾 Technologies Used
 
@@ -74,13 +64,18 @@ Follow these steps to run the project locally:
 - JavaScript
 - [qrcode.js](https://davidshimjs.github.io/qrcodejs/) (or your used QR code library)
 
----
+
+## 🌐 Check Out Live
+
+🔗 **Live Website**: [https://aadityaguptaaa.github.io/qr-code-generator/](https://aadityaguptaaa.github.io/qr-code-generator/)
+
+
 
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
 Feel free to use, modify, and distribute it as per the license terms.
 
----
+
 
 > Made with 💻 by [aadityaguptaaa](https://github.com/aadityaguptaaa)
