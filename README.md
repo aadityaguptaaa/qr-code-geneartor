@@ -76,6 +76,8 @@ Follow these steps to run the project locally:
 This project is licensed under the **MIT License**.  
 Feel free to use, modify, and distribute it as per the license terms.
 
+<br>
+<br>
 
 
 > Made with 💻 by [aadityaguptaaa](https://github.com/aadityaguptaaa)
